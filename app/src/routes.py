@@ -21,8 +21,8 @@ def home():
     visits = db.visits.find_one()
 
   html = """
-    <div><strong>Хэш контейнера с приложением:</strong> {0}</div>
-    <div><strong>Кол-во просмотров страницы:</strong> {1}</div>
+    <div><strong>Хэш контейнера:</strong> {0}</div>
+    <div><strong>Просмотры страницы:</strong> {1}</div>
   """
   
   return html.format(os.environ['HOSTNAME'], visits['count'])
